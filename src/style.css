@@ -380,11 +380,16 @@ button:focus {
 
 @media (max-width: 767px) {
   .Typewriter__wrapper {
-    font-size: 1.1em !important;
-    font-weight: 500 !important;
-    position: absolute !important;
-    text-align: left !important;  /* Align text to the left on mobile */
+    font-size: 1.2em !important;      
+    font-weight: 500 !important;    
+    line-height: 1.4 !important;    
+    word-wrap: break-word !important;  
+    word-break: break-all !important;  /* Break lines within words */
+    overflow-x: hidden !important;    /* Prevent horizontal overflow */
+    padding: 0 10px !important;      /* Add padding for spacing */
+    max-width: 100%;                /* Ensure it doesn't expand beyond the screen width */
   }
+
   .Typewriter__cursor {
     display: none !important;
   }
