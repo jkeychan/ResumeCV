@@ -3,6 +3,7 @@ import { Container, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Particle from "../Particle";
 import pdf from "../../Assets/Jeff_Bollinger-Resume-2023-redacted.pdf";
+import wordVersion from "../../Assets/Jeff_Bollinger-Resume-2023-redacted.docx";
 import { AiOutlineDownload } from "react-icons/ai";
 import { Document, Page, pdfjs } from "react-pdf";
 import "react-pdf/dist/esm/Page/AnnotationLayer.css";
@@ -24,10 +25,20 @@ function ResumeNew() {
             variant="primary"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: "250px", marginRight: "10px" }} // added marginRight for spacing between buttons
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;Download Full PDF Version
+          </Button>
+
+          <Button
+            variant="primary" 
+            href={wordVersion}
+            target="_blank"
+            style={{ maxWidth: "250px", marginLeft: "10px" }} // added marginLeft for spacing between buttons
+          >
+            <AiOutlineDownload />
+            &nbsp;Download Word Version
           </Button>
         </Row>
 
@@ -42,10 +53,20 @@ function ResumeNew() {
             variant="primary"
             href={pdf}
             target="_blank"
-            style={{ maxWidth: "250px" }}
+            style={{ maxWidth: "250px", marginRight: "10px" }} // added marginRight for spacing between buttons
           >
             <AiOutlineDownload />
-            &nbsp;Download CV
+            &nbsp;Download Full PDF Version
+          </Button>
+
+          <Button
+            variant="primary" 
+            href={wordVersion}
+            target="_blank"
+            style={{ maxWidth: "250px", marginLeft: "10px" }} // added marginLeft for spacing between buttons
+          >
+            <AiOutlineDownload />
+            &nbsp;Download Word Version
           </Button>
         </Row>
       </Container>
