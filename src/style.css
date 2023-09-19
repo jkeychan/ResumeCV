@@ -84,6 +84,9 @@ button:focus {
 
 .navbar {
   position: fixed !important;
+  z-index: 1000 !important;
+  min-height: 60px;
+  visibility: visible !important;
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
@@ -142,6 +145,9 @@ button:focus {
 
 @media (max-width: 767px) {
   .navbar {
+    z-index: 1000 !important;
+    min-height: 60px;
+    visibility: visible !important;
     padding: 1rem 2rem !important;
     font-size: 1.4rem !important;
     background-color: #181a27 !important;
@@ -171,6 +177,9 @@ button:focus {
 
 @media (max-width: 767px) {
   .nav-link {
+    z-index: 1000 !important;
+    min-height: 60px;
+    visibility: visible !important;
     padding: 0.7rem 1rem !important;
   }
 }
@@ -295,14 +304,16 @@ button:focus {
 
 @media (max-width: 767px) {
   .Typewriter__wrapper {
-    font-size: 1.4em !important;
+    font-size: 1.1em !important;
     font-weight: 500 !important;
     position: absolute !important;
+    text-align: left !important;  /* Align text to the left on mobile */
   }
   .Typewriter__cursor {
     display: none !important;
   }
 }
+
 
 .myAvtar {
   justify-content: center !important;
