@@ -35,7 +35,7 @@ function NavBar() {
           aria-controls="responsive-navbar-nav" 
           onClick={() => updateExpanded(!expand)}
         />
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => updateExpanded(expand => !expand)} />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
@@ -69,7 +69,7 @@ function NavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
-}
+);
+  }
 
 export default NavBar;

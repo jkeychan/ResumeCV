@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 html {
   --section-background-color: linear-gradient(
     to bottom left,
@@ -19,7 +26,8 @@ html {
 }
 
 button:focus {
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 /* --------- */
@@ -77,9 +85,13 @@ button:focus {
 /* --------- */
 .sticky {
   background-color: #1b1a2ea9 !important;
+  -webkit-transition: all 0.3s ease-out 0s !important;
+  -o-transition: all 0.3s ease-out 0s !important;
   transition: all 0.3s ease-out 0s !important;
-  box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
-  backdrop-filter: blur(15px) !important;
+  -webkit-box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+          box-shadow: 0px 10px 10px 0px rgba(9, 5, 29, 0.171) !important;
+  -webkit-backdrop-filter: blur(15px) !important;
+          backdrop-filter: blur(15px) !important;
 }
 
 .navbar {
@@ -87,6 +99,8 @@ button:focus {
   z-index: 1000 !important;
   min-height: 60px;
   visibility: visible !important;
+  -webkit-transition: all 0.3s ease-out 0s !important;
+  -o-transition: all 0.3s ease-out 0s !important;
   transition: all 0.3s ease-out 0s !important;
   padding: 0.3rem 2rem !important;
   font-size: 1.2rem !important;
@@ -105,7 +119,9 @@ button:focus {
   width: 27px !important;
   margin-top: 5px !important;
   margin-bottom: 5px !important;
-  transform: rotate(0deg) !important;
+  -webkit-transform: rotate(0deg) !important;
+      -ms-transform: rotate(0deg) !important;
+          transform: rotate(0deg) !important;
   left: 0 !important;
   opacity: 1 !important;
 }
@@ -117,7 +133,11 @@ button:focus {
 
 .navbar-toggler span:nth-child(1),
 .navbar-toggler span:nth-child(3) {
+  -webkit-transition: -webkit-transform 0.35s ease-in-out !important;
+  transition: -webkit-transform 0.35s ease-in-out !important;
+  -o-transition: transform 0.35s ease-in-out !important;
   transition: transform 0.35s ease-in-out !important;
+  transition: transform 0.35s ease-in-out, -webkit-transform 0.35s ease-in-out !important;
   transition: transform 0.35s ease-in-out !important;
 }
 
@@ -125,7 +145,9 @@ button:focus {
   position: absolute !important;
   left: 12px !important;
   top: 10px !important;
-  transform: rotate(135deg) !important;
+  -webkit-transform: rotate(135deg) !important;
+      -ms-transform: rotate(135deg) !important;
+          transform: rotate(135deg) !important;
   opacity: 0.9 !important;
 }
 
@@ -139,7 +161,9 @@ button:focus {
   position: absolute !important;
   left: 12px !important;
   top: 10px !important;
-  transform: rotate(-135deg) !important;
+  -webkit-transform: rotate(-135deg) !important;
+      -ms-transform: rotate(-135deg) !important;
+          transform: rotate(-135deg) !important;
   opacity: 0.9 !important;
 }
 
@@ -191,6 +215,8 @@ button:focus {
 
 .navbar-nav .nav-item a {
   font-weight: 400;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
   position: relative;
   z-index: 1;
@@ -207,6 +233,8 @@ button:focus {
   bottom: 1px;
   left: 0;
   z-index: -1;
+  -webkit-transition: all 0.3s ease-out 0s;
+  -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
 
@@ -218,37 +246,85 @@ button:focus {
 /* Home section */
 /* --------- */
 .wave {
-  animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
-  animation-duration: 2.1s; /* Change to speed up or slow down */
-  animation-iteration-count: infinite; /* Never stop waving :) */
-  transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
+  -webkit-animation-name: wave-animation;
+          animation-name: wave-animation; /* Refers to the name of your @keyframes element below */
+  -webkit-animation-duration: 2.1s;
+          animation-duration: 2.1s; /* Change to speed up or slow down */
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite; /* Never stop waving :) */
+  -webkit-transform-origin: 70% 70%;
+      -ms-transform-origin: 70% 70%;
+          transform-origin: 70% 70%; /* Pivot around the bottom-left palm */
   display: inline-block;
+}
+
+@-webkit-keyframes wave-animation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  10% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  } /* The following five values can be played with to make the waving more or less extreme */
+  20% {
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
+  }
+  30% {
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
+  }
+  40% {
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
+  }
+  50% {
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
+  }
+  60% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  } /* Reset for the last half to pause */
+  100% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
 }
 
 @keyframes wave-animation {
   0% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
   10% {
-    transform: rotate(14deg);
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
   } /* The following five values can be played with to make the waving more or less extreme */
   20% {
-    transform: rotate(-8deg);
+    -webkit-transform: rotate(-8deg);
+            transform: rotate(-8deg);
   }
   30% {
-    transform: rotate(14deg);
+    -webkit-transform: rotate(14deg);
+            transform: rotate(14deg);
   }
   40% {
-    transform: rotate(-4deg);
+    -webkit-transform: rotate(-4deg);
+            transform: rotate(-4deg);
   }
   50% {
-    transform: rotate(10deg);
+    -webkit-transform: rotate(10deg);
+            transform: rotate(10deg);
   }
   60% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   } /* Reset for the last half to pause */
   100% {
-    transform: rotate(0deg);
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
   }
 }
 #tsparticles {
@@ -316,7 +392,9 @@ button:focus {
 
 
 .myAvtar {
-  justify-content: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
   padding-top: 2em !important;
 }
 
@@ -355,11 +433,14 @@ button:focus {
 }
 
 .home-about-social-links {
-  justify-content: center !important;
+  -webkit-box-pack: center !important;
+      -ms-flex-pack: center !important;
+          justify-content: center !important;
   padding-top: 15px !important;
   display: inline-block !important;
   position: relative !important;
-  padding-inline-start: 0 !important;
+  -webkit-padding-start: 0 !important;
+          padding-inline-start: 0 !important;
 }
 
 .home-social-icons {
@@ -372,6 +453,8 @@ button:focus {
   line-height: 2em !important;
   background: rgba(255, 255, 255, 0.972) !important;
   border-radius: 50% !important;
+  -webkit-transition: 0.5s !important;
+  -o-transition: 0.5s !important;
   transition: 0.5s !important;
 }
 
@@ -384,19 +467,27 @@ button:focus {
   height: 100%;
   border-radius: 50%;
   background: #68187a;
+  -webkit-transition: 0.5s;
+  -o-transition: 0.5s;
   transition: 0.5s;
-  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+      -ms-transform: scale(0.9);
+          transform: scale(0.9);
   z-index: -1;
 }
 
 .home-social-icons:hover::before {
-  transform: scale(1.1);
-  box-shadow: 0 0 15px #801f95;
+  -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+          transform: scale(1.1);
+  -webkit-box-shadow: 0 0 15px #801f95;
+          box-shadow: 0 0 15px #801f95;
 }
 
 .home-social-icons:hover {
   color: #87209e;
-  box-shadow: 0 0 5px #87209e;
+  -webkit-box-shadow: 0 0 5px #87209e;
+          box-shadow: 0 0 5px #87209e;
   text-shadow: 0 0 2px #87209e;
 }
 
@@ -475,17 +566,23 @@ button:focus {
 }
 
 .project-card-view {
-  box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+  -webkit-box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
+          box-shadow: 0 4px 5px 3px rgba(119, 53, 136, 0.459) !important;
   color: white !important;
   background-color: transparent !important;
   opacity: 0.9 !important;
+  -webkit-transition: all 0.5s ease 0s !important;
+  -o-transition: all 0.5s ease 0s !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
 .project-card-view:hover {
-  transform: scale(1.02) !important;
+  -webkit-transform: scale(1.02) !important;
+      -ms-transform: scale(1.02) !important;
+          transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+  -webkit-box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
+          box-shadow: 0 4px 4px 5px rgba(129, 72, 144, 0.561) !important;
 }
 
 .blog-card {
@@ -498,8 +595,11 @@ button:focus {
 
 .blog-card-view {
   background-color: transparent !important;
-  box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
+  -webkit-box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
+          box-shadow: 0 3px 3px 2px rgba(145, 77, 161, 0.459) !important;
   color: white !important;
+  -webkit-transition: all 0.5s ease 0s !important;
+  -o-transition: all 0.5s ease 0s !important;
   transition: all 0.5s ease 0s !important;
   height: 100% !important;
 }
@@ -514,9 +614,12 @@ button:focus {
 }
 
 .blog-card-view:hover {
-  transform: scale(1.02) !important;
+  -webkit-transform: scale(1.02) !important;
+      -ms-transform: scale(1.02) !important;
+          transform: scale(1.02) !important;
   overflow: hidden !important;
-  box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+  -webkit-box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
+          box-shadow: 0 3px 3px 5px rgba(155, 88, 173, 0.65) !important;
 }
 
 .card-img-top {
@@ -544,7 +647,8 @@ button:focus {
 }
 .btn:focus {
   outline: none !important;
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 .project-heading {
   color: white !important;
@@ -575,8 +679,11 @@ button:focus {
   text-align: center !important;
   border-radius: 5px !important;
   display: table !important;
-  box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+  -webkit-box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
+          box-shadow: 4px 5px 4px 3px rgba(89, 4, 168, 0.137) !important;
   overflow: hidden !important;
+  -webkit-transition: all 0.4s ease 0s !important;
+  -o-transition: all 0.4s ease 0s !important;
   transition: all 0.4s ease 0s !important;
 }
 
@@ -587,7 +694,9 @@ button:focus {
 }
 
 .tech-icons:hover {
-  transform: scale(1.05) !important;
+  -webkit-transform: scale(1.05) !important;
+      -ms-transform: scale(1.05) !important;
+          transform: scale(1.05) !important;
   overflow: hidden !important;
   border: 2.2px solid rgba(197, 115, 230, 0.883) !important;
 }
@@ -628,7 +737,9 @@ button:focus {
 .resume {
   padding-top: 50px;
   padding-bottom: 50px;
-  justify-content: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .resume-left {
@@ -712,26 +823,45 @@ button:focus {
   padding: 0.25rem 0.98rem !important;
   border-radius: 5px !important;
   line-height: 1.4 !important;
+  -webkit-transition: 0.3s ease !important;
+  -o-transition: 0.3s ease !important;
   transition: 0.3s ease !important;
 }
 
 .like-btn:hover {
-  transform: translateY(-2px) !important;
+  -webkit-transform: translateY(-2px) !important;
+      -ms-transform: translateY(-2px) !important;
+          transform: translateY(-2px) !important;
   background-color: #a24dd386 !important;
   border-color: #a24dd386 !important;
 }
 
 .animate-like {
-  animation-name: likeAnimation;
-  animation-fill-mode: forwards;
-  animation-duration: 0.85s;
+  -webkit-animation-name: likeAnimation;
+          animation-name: likeAnimation;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-duration: 0.85s;
+          animation-duration: 0.85s;
+}
+@-webkit-keyframes likeAnimation {
+  0% {
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
+  }
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
 }
 @keyframes likeAnimation {
   0% {
-    transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+            transform: scale(1.5);
   }
   100% {
-    transform: scale(1);
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
 }
 
@@ -749,7 +879,9 @@ button:focus {
 }
 
 .fork-btn-inner:hover {
-  transform: translateY(-2px) !important;
+  -webkit-transform: translateY(-2px) !important;
+      -ms-transform: translateY(-2px) !important;
+          transform: translateY(-2px) !important;
   background-color: #a24dd386 !important;
   border-color: #a24dd386 !important;
 }
