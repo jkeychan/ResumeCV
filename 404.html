@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Not Found</title>
+    <script>
+        // Parses the URL path
+        var path = window.location.pathname;
+        // Redirects to the index.html with the path
+        window.location.replace('/index.html?notFound=' + path);
+    </script>
+</head>
+<body>
+    <p>If you are not redirected automatically, follow the <a href="/index.html">link to the homepage</a>.</p>
+</body>
+</html>

@@ -31,7 +31,12 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Toggle 
+      <Navbar.Brand as={Link} to="/">
+      {/* Your brand name or logo here */}
+      Jeff Bollinger
+      </Navbar.Brand>
+
+      <Navbar.Toggle 
           aria-controls="responsive-navbar-nav" 
           onClick={() => updateExpanded(!expand)}
         />
