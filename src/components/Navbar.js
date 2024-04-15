@@ -31,12 +31,15 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-        <Navbar.Brand as={Link} to="/">Jeff Bollinger</Navbar.Brand>
-        <Navbar.Toggle 
+      <Navbar.Brand as={Link} to="/">
+      {/* Your brand name or logo here */}
+      Jeff Bollinger
+      </Navbar.Brand>
+
+      <Navbar.Toggle 
           aria-controls="responsive-navbar-nav" 
           onClick={() => updateExpanded(!expand)}
         />
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => updateExpanded(expand => !expand)} />
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
@@ -71,7 +74,7 @@ function NavBar() {
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
-}
+);
+  }
 
 export default NavBar;
