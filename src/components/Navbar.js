@@ -7,7 +7,6 @@ import {
   AiOutlineHome,
   AiOutlineFundProjectionScreen,
 } from "react-icons/ai";
-
 import { CgFileDocument } from "react-icons/cg";
 
 function NavBar() {
@@ -32,7 +31,13 @@ function NavBar() {
       className={navColour ? "sticky" : "navbar"}
     >
       <Container>
-              <Navbar.Collapse id="responsive-navbar-nav">
+        <Navbar.Brand as={Link} to="/">Jeff Bollinger</Navbar.Brand>
+        <Navbar.Toggle 
+          aria-controls="responsive-navbar-nav" 
+          onClick={() => updateExpanded(!expand)}
+        />
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" onClick={() => updateExpanded(expand => !expand)} />
+        <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className="ms-auto" defaultActiveKey="#home">
             <Nav.Item>
               <Nav.Link as={Link} to="/" onClick={() => updateExpanded(false)}>
