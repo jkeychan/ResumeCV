@@ -15,6 +15,8 @@ import ams from "../../Assets/Projects/ams.png"
 import web from "../../Assets/Projects/web.png"
 import cloud from "../../Assets/Projects/cloud.png"
 import earth from "../../Assets/Projects/earth.png"
+import LayersOfIR from "../../Assets/Projects/LayersOfIR.png"
+import PantherPod from "../../Assets/Projects/PantherPod.png"
 
 function Projects() {
   const links = [
@@ -90,6 +92,28 @@ function Projects() {
           This is a non-exhaustive list of blogs, articles, conferences hosted, and other publications I've created or co-created.
         </p>
         <Row style={{ justifyContent: "center", paddingBottom: "10px" }}>
+          <Col md={4} className="project-card">
+                <ProjectCard
+                  imgPath={PantherPod}
+                  isBlog={false}
+                  title="The Five Layers of Incident Response"
+                  description={
+                  <span>
+                    This is a podcast episode from <a href="https://open.spotify.com/show/6xa9t5dty4eH0UXDQXIew9?si=823705caf5ce41a1&nd=1&dlsi=ab51f154031649d4" target="_blank" rel="noopener noreferrer">Detection at Scale</a> where I discuss how to leverage human intuition in incident response and threat detection and how I scaled incident response to an enterprise level at LinkedIn."
+                  </span>
+                  }
+                  demoLink="https://panther.com/resources/podcasts/linkedins-jeff-bollinger-on-the-role-of-human-intuition-in-addressing-security-challenges/"
+                 />
+              </Col>
+          <Col md={4} className="project-card">
+              <ProjectCard
+                imgPath={LayersOfIR}
+                isBlog={false}
+                title="The Five Layers of Incident Response"
+                description="This blog series discusses how a new threat detection engineering or incident response team can apply techniques and strategies I developed for integrating quickly into overall security operations."
+                demoLink="https://jacknaglieri.substack.com/p/the-five-layers-of-incident-response"
+              />
+            </Col>
           <Col md={4} className="project-card">
             <ProjectCard
               imgPath={moonbase}

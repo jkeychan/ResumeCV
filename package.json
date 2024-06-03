@@ -22,6 +22,10 @@
     "typewriter-effect": "^2.18.2",
     "web-vitals": "^2.1.4"
   },
+  "devDependencies": {
+    "npm-force-resolutions": "^0.0.10",
+    "@babel/plugin-proposal-private-property-in-object": "^7.14.5"
+  },
   "scripts": {
     "prestart": "npm install",
     "predeploy": "npm run build",
@@ -48,8 +52,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "@babel/plugin-proposal-private-property-in-object": "^7.21.11"
   }
 }
