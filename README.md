@@ -8,9 +8,7 @@ Start with the original version, but if you want to edit this fork then just clo
 
 ## Installation and Setup Instructions
 
-1. Installation: `npm install`
-
-2. In the project directory: `npm start`
+1. In the project directory and to test: `npm run start`
 
 This will execute the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
