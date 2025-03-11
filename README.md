@@ -8,7 +8,9 @@ Start with the original version, but if you want to edit this fork then just clo
 
 ## Installation and Setup Instructions
 
-1. In the project directory and to test: `npm run start`
+1. You may need to run an older version of [react-parallax-tilt](https://www.npmjs.com/package/react-parallax-tilt): 
+`npm install react-parallax-tilt@1.7.1`
+2. In the project directory and to test: `npm run start`
 
 This will execute the app in development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
@@ -16,5 +18,7 @@ The page will automatically reload if you make edits or update any files in the 
 
 ## Usage Instructions
 
-Open the project folder and Navigate to `/src/components/`. <br/> to customize and personalize this fork. Once completed, run `npm run build` in the same directory to build the final site for uploading to your hosting provider.
+Open the project folder and Navigate to `/src/components/`. <br/> to customize and personalize this fork. 
+
+Once completed, run `npm run build` in the same directory to build the final site for uploading to your hosting provider. You can upload everything in the newly created `build` folder.
 
