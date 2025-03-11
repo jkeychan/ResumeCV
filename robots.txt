@@ -6,4 +6,4 @@ Disallow: /
 
 User-agent: *
 Disallow: 
-Sitemap: https://jeff.bollingerfamily.net/sitemap.xml
+Sitemap: https://www.jeff-bollinger.com/sitemap.xml
