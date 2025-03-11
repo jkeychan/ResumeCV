@@ -9,9 +9,9 @@ package-lock.json
 
 # testing
 /coverage
-/src/Assets/Jeff_*
-*.docx
-*.pdf
+#/src/Assets/Jeff_*
+#*.docx
+#*.pdf
 
 # production
 /build
